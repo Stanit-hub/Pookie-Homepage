@@ -5,7 +5,7 @@ import './HeroNew.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FRAME_COUNT = 97; // 0 ~ 96
+const FRAME_COUNT = 49; // 0 ~ 48
 const MOBILE_BREAKPOINT = 768;
 
 export default function HeroNew() {
