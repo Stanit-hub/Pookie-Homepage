@@ -6,96 +6,98 @@ export default function BrandSection() {
       style={{ minHeight: '100vh' }}
     >
       <div className="max-w-5xl mx-auto w-full py-8">
-        {/* Label */}
-        <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
-          <span
-            className="inline-block px-3 py-1.5 rounded-md text-white"
+        <div className="min-h-[240px] md:min-h-[260px] flex flex-col justify-start">
+          {/* Label */}
+          <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
+            <span
+              className="inline-block px-3 py-1.5 rounded-md text-white"
+              style={{
+                fontFamily: "'Noto Sans KR', sans-serif",
+                fontWeight: 500,
+                fontSize: '14px',
+                background: '#0099FF',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              What is Pookie?
+            </span>
+          </div>
+
+          {/* Desktop Title */}
+          <h2
+            className="hidden md:block text-5xl mb-4"
             style={{
               fontFamily: "'Noto Sans KR', sans-serif",
-              fontWeight: 500,
-              fontSize: '14px',
-              background: '#0099FF',
+              fontWeight: 700,
+              lineHeight: 1.3,
+              letterSpacing: '-0.02em',
+              color: '#181818',
+            }}
+          >
+            손에 쥔 한 장의 포토카드에서
+            <br />
+            팬덤의 새로운 이야기가 시작됩니다.
+          </h2>
+
+          {/* Mobile Title */}
+          <h2
+            className="block md:hidden mx-auto mb-4"
+            style={{
+              maxWidth: '320px',
+              fontFamily: "'Noto Sans KR', sans-serif",
+              fontWeight: 700,
+              fontSize: '23px',
+              lineHeight: 1.35,
+              letterSpacing: '-0.035em',
+              color: '#181818',
+              wordBreak: 'keep-all',
+            }}
+          >
+            손에 쥔 한 장의 포토카드에서
+            <br />
+            팬덤의 새로운 이야기가 시작됩니다.
+          </h2>
+
+          {/* Desktop Description */}
+          <p
+            className="hidden md:block text-sm leading-relaxed max-w-2xl mx-auto mb-10"
+            style={{
+              fontFamily: "'Noto Sans KR', sans-serif",
+              color: '#8B8B8B',
+              fontWeight: 400,
+              lineHeight: 1.5,
               letterSpacing: '-0.02em',
             }}
           >
-            What is Pookie?
-          </span>
+            Pookie는 팬들이 가장 사랑하는 굿즈인 포토카드에 디지털 세계를 연결합니다.
+            <br />
+            포토카드 한 장으로 콘텐츠, 리워드, 데이터까지 이어지는 새로운 Fan-Tech
+            인프라를 만듭니다.
+          </p>
+
+          {/* Mobile Description */}
+          <p
+            className="block md:hidden mx-auto mb-6"
+            style={{
+              maxWidth: '320px',
+              fontFamily: "'Noto Sans KR', sans-serif",
+              color: '#8B8B8B',
+              fontWeight: 400,
+              fontSize: '13px',
+              lineHeight: 1.55,
+              letterSpacing: '-0.03em',
+              wordBreak: 'keep-all',
+            }}
+          >
+            Pookie는 팬들이 가장 사랑하는 굿즈인 포토카드에
+            <br />
+            디지털 세계를 연결합니다.
+            <br />
+            포토카드 한 장으로 콘텐츠, 리워드, 데이터까지 이어지는
+            <br />
+            새로운 Fan-Tech 인프라를 만듭니다.
+          </p>
         </div>
-
-        {/* Desktop Title */}
-        <h2
-          className="hidden md:block text-5xl mb-4"
-          style={{
-            fontFamily: "'Noto Sans KR', sans-serif",
-            fontWeight: 700,
-            lineHeight: 1.3,
-            letterSpacing: '-0.02em',
-            color: '#181818',
-          }}
-        >
-          손에 쥔 한 장의 포토카드에서
-          <br />
-          팬덤의 새로운 이야기가 시작됩니다.
-        </h2>
-
-        {/* Mobile Title */}
-        <h2
-          className="block md:hidden mx-auto mb-4"
-          style={{
-            maxWidth: '320px',
-            fontFamily: "'Noto Sans KR', sans-serif",
-            fontWeight: 700,
-            fontSize: '23px',
-            lineHeight: 1.35,
-            letterSpacing: '-0.035em',
-            color: '#181818',
-            wordBreak: 'keep-all',
-          }}
-        >
-          손에 쥔 한 장의 포토카드에서
-          <br />
-          팬덤의 새로운 이야기가 시작됩니다.
-        </h2>
-
-        {/* Desktop Description */}
-        <p
-          className="hidden md:block text-sm leading-relaxed max-w-2xl mx-auto mb-10"
-          style={{
-            fontFamily: "'Noto Sans KR', sans-serif",
-            color: '#8B8B8B',
-            fontWeight: 400,
-            lineHeight: 1.5,
-            letterSpacing: '-0.02em',
-          }}
-        >
-          Pookie는 팬들이 가장 사랑하는 굿즈인 포토카드에 디지털 세계를 연결합니다.
-          <br />
-          포토카드 한 장으로 콘텐츠, 리워드, 데이터까지 이어지는 새로운 Fan-Tech
-          인프라를 만듭니다.
-        </p>
-
-        {/* Mobile Description */}
-        <p
-          className="block md:hidden mx-auto mb-6"
-          style={{
-            maxWidth: '320px',
-            fontFamily: "'Noto Sans KR', sans-serif",
-            color: '#8B8B8B',
-            fontWeight: 400,
-            fontSize: '13px',
-            lineHeight: 1.55,
-            letterSpacing: '-0.03em',
-            wordBreak: 'keep-all',
-          }}
-        >
-          Pookie는 팬들이 가장 사랑하는 굿즈인 포토카드에
-          <br />
-          디지털 세계를 연결합니다.
-          <br />
-          포토카드 한 장으로 콘텐츠, 리워드, 데이터까지 이어지는
-          <br />
-          새로운 Fan-Tech 인프라를 만듭니다.
-        </p>
 
         {/* PC Grid */}
         <div

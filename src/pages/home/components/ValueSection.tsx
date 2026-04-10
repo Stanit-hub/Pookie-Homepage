@@ -41,53 +41,55 @@ export default function ValueSection() {
       ></div>
 
       <div className="relative z-10 max-w-5xl mx-auto w-full py-8">
-        {/* Label */}
-        <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
-          <span
-            className="inline-block px-3 py-1.5 rounded-md text-white"
+        <div className="min-h-[220px] md:min-h-[210px] flex flex-col justify-start">
+          {/* Label */}
+          <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
+            <span
+              className="inline-block px-3 py-1.5 rounded-md text-white"
+              style={{
+                fontFamily: "'Noto Sans KR', sans-serif",
+                fontWeight: 500,
+                fontSize: '14px',
+                background: '#0099FF',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              Why Pookie?
+            </span>
+          </div>
+
+          {/* Main copy */}
+          <h2
+            className="text-2xl md:text-5xl mb-3 md:mb-3"
             style={{
               fontFamily: "'Noto Sans KR', sans-serif",
-              fontWeight: 500,
-              fontSize: '14px',
-              background: '#0099FF',
+              fontWeight: 700,
+              lineHeight: 1.1,
+              letterSpacing: '-0.02em',
+              color: '#FFFFFF',
+            }}
+          >
+            포토카드 한 장이
+            <br />
+            팬 경험·수익·데이터를 만듭니다
+          </h2>
+
+          {/* Sub copy */}
+          <p
+            className="text-xs md:text-sm leading-relaxed max-w-2xl mx-auto mb-6 md:mb-6"
+            style={{
+              fontFamily: "'Noto Sans KR', sans-serif",
+              color: '#EDF5FC',
+              fontWeight: 400,
+              lineHeight: 1.5,
               letterSpacing: '-0.02em',
             }}
           >
-            Why Pookie?
-          </span>
+            Pookie는 포토카드를 팬과의 접점으로 바꾸는 솔루션입니다.
+            <br />
+            4가지 핵심 가치로 Fan-IP 생태계를 새롭게 설계합니다.
+          </p>
         </div>
-
-        {/* Main copy */}
-        <h2
-          className="text-2xl md:text-5xl mb-3 md:mb-4"
-          style={{
-            fontFamily: "'Noto Sans KR', sans-serif",
-            fontWeight: 700,
-            lineHeight: 1.1,
-            letterSpacing: '-0.02em',
-            color: '#FFFFFF',
-          }}
-        >
-          포토카드 한 장이
-          <br />
-          팬 경험·수익·데이터를 만듭니다
-        </h2>
-
-        {/* Sub copy */}
-        <p
-          className="text-xs md:text-sm leading-relaxed max-w-2xl mx-auto mb-6 md:mb-10"
-          style={{
-            fontFamily: "'Noto Sans KR', sans-serif",
-            color: '#EDF5FC',
-            fontWeight: 400,
-            lineHeight: 1.5,
-            letterSpacing: '-0.02em',
-          }}
-        >
-          Pookie는 포토카드를 팬과의 접점으로 바꾸는 솔루션입니다.
-          <br />
-          4가지 핵심 가치로 Fan-IP 생태계를 새롭게 설계합니다.
-        </p>
 
         {/* 4 value cards — 모바일 1열, PC 2열 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">

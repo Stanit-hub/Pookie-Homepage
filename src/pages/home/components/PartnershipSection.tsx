@@ -30,65 +30,67 @@ export default function PartnershipSection() {
         style={{ minHeight: '100vh' }}
       >
         <div className="max-w-5xl mx-auto w-full py-8">
-          {/* Label */}
-          <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
-            <span
-              className="inline-block px-3 py-1.5 rounded-md text-white"
+          <div className="min-h-[220px] md:min-h-[210px] flex flex-col justify-start">
+            {/* Label */}
+            <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
+              <span
+                className="inline-block px-3 py-1.5 rounded-md text-white"
+                style={{
+                  fontFamily: "'Noto Sans KR', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '14px',
+                  background: '#0099FF',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                How we work with you
+              </span>
+            </div>
+
+            {/* Main copy */}
+            <h2
+              className="text-2xl md:text-5xl mb-4"
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#181818' }}
+            >
+              빠르고 정확한 제작 과정
+              <br />
+              팬 여정을 함께 설계 합니다.
+            </h2>
+
+            {/* Desktop Description */}
+            <p
+              className="hidden md:block text-xs md:text-sm leading-relaxed max-w-2xl mx-auto mb-10"
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", color: '#8B8B8B', fontWeight: 400, lineHeight: 1.5, letterSpacing: '-0.02em' }}
+            >
+              IP사의 세계관과 캠페인 목표에 맞춰 기획–제작–운영–리포트까지 풀 서비스를 제공합니다.
+              <br />
+              복잡한 기술 구현은 Pookie에게 맡기고, 팬을 위한 특별한 경험에만 집중할 수 있습니다.
+            </p>
+
+            {/* Mobile Description */}
+            <p
+              className="block md:hidden mx-auto mb-6"
               style={{
+                maxWidth: '320px',
                 fontFamily: "'Noto Sans KR', sans-serif",
-                fontWeight: 500,
-                fontSize: '14px',
-                background: '#0099FF',
-                letterSpacing: '-0.02em',
+                color: '#8B8B8B',
+                fontWeight: 400,
+                fontSize: '13px',
+                lineHeight: 1.55,
+                letterSpacing: '-0.03em',
+                whiteSpace: 'pre-line',
+                wordBreak: 'keep-all',
               }}
             >
-              How we work with you
-            </span>
+              IP사의 세계관과 캠페인 목표에 맞춰
+              {'\n'}
+              기획–제작–운영–리포트까지 풀 서비스를 제공합니다.
+              {'\n'}
+              복잡한 기술 구현은 Pookie에게 맡기고,
+              {'\n'}
+              팬을 위한 특별한 경험에만 집중할 수 있습니다.
+            </p>
           </div>
-
-          {/* Main copy */}
-          <h2
-            className="text-2xl md:text-5xl mb-3 md:mb-4"
-            style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#181818' }}
-          >
-            빠르고 정확한 제작 과정
-            <br />
-            팬 여정을 함께 설계 합니다.
-          </h2>
-
-          {/* Desktop Description */}
-          <p
-            className="hidden md:block text-xs md:text-sm leading-relaxed max-w-2xl mx-auto mb-8 md:mb-12"
-            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: '#8B8B8B', fontWeight: 400, lineHeight: 1.5, letterSpacing: '-0.02em' }}
-          >
-            IP사의 세계관과 캠페인 목표에 맞춰 기획–제작–운영–리포트까지 풀 서비스를 제공합니다.
-            <br />
-            복잡한 기술 구현은 Pookie에게 맡기고, 팬을 위한 특별한 경험에만 집중할 수 있습니다.
-          </p>
-
-          {/* Mobile Description */}
-          <p
-            className="block md:hidden mx-auto mb-8"
-            style={{
-              maxWidth: '320px',
-              fontFamily: "'Noto Sans KR', sans-serif",
-              color: '#8B8B8B',
-              fontWeight: 400,
-              fontSize: '13px',
-              lineHeight: 1.55,
-              letterSpacing: '-0.03em',
-              whiteSpace: 'pre-line',
-              wordBreak: 'keep-all',
-            }}
-          >
-            IP사의 세계관과 캠페인 목표에 맞춰
-            {'\n'}
-            기획–제작–운영–리포트까지 풀 서비스를 제공합니다.
-            {'\n'}
-            복잡한 기술 구현은 Pookie에게 맡기고,
-            {'\n'}
-            팬을 위한 특별한 경험에만 집중할 수 있습니다.
-          </p>
 
           {/* PC Timeline — 가로 */}
           <div className="hidden md:flex relative items-start justify-between mb-16 gap-0">
