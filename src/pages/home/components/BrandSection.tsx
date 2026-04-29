@@ -36,7 +36,7 @@ export default function BrandSection() {
           >
             손에 쥔 한 장의 포토카드에서
             <br />
-            팬덤의 새로운 이야기가 시작됩니다.
+            팬덤의 새로운 이야기가 시작됩니다
           </h2>
 
           {/* Mobile Title */}
@@ -55,7 +55,7 @@ export default function BrandSection() {
           >
             손에 쥔 한 장의 포토카드에서
             <br />
-            팬덤의 새로운 이야기가 시작됩니다.
+            팬덤의 새로운 이야기가 시작됩니다
           </h2>
 
           {/* Desktop Description */}

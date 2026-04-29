@@ -54,7 +54,7 @@ export default function PartnershipSection() {
             >
               빠르고 정확한 제작 과정
               <br />
-              팬 여정을 함께 설계 합니다.
+              팬 여정을 함께 설계 합니다
             </h2>
 
             {/* Desktop Description */}
