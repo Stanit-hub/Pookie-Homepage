@@ -28,14 +28,19 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       params.append(key, value.toString());
     });
     try {
-      await fetch('https://formspree.io/f/mojzqnqw', {
+      const res = await fetch('https://formspree.io/f/mojzqnqw', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(Object.fromEntries(formData)),
       });
-      setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        alert(`전송 실패 (${res.status}): ${data?.error || '잠시 후 다시 시도해주세요.'}`);
+      }
     } catch {
-      // silently handle
+      alert('네트워크 오류가 발생했습니다. 인터넷 연결을 확인해주세요.');
     } finally {
       setSubmitting(false);
     }
