@@ -28,7 +28,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       params.append(key, value.toString());
     });
     try {
-      await fetch('https://formspree.io/f/xreoanzo', {
+      await fetch('https://formspree.io/f/mojzqnqw', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(Object.fromEntries(formData)),
@@ -79,6 +79,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <p className="text-gray-400 text-sm mb-8" style={noto}>Pookie 파트너십 문의를 남겨주세요.</p>
 
             <form onSubmit={handleSubmit} data-readdy-form className="flex flex-col gap-4">
+              {/* Honeypot: 봇 차단용 숨김 필드 - 사람은 건너뜀, 봇은 자동 채움 */}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wider" style={noto}>이름 *</label>
@@ -86,7 +88,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     type="text"
                     name="name"
                     required
-                    placeholder="홍길동"
+                    placeholder="이름"
                     className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none transition-colors"
                     style={{ ...noto, '--tw-ring-color': '#0099FF' } as React.CSSProperties}
                     onFocus={(e) => (e.currentTarget.style.borderColor = '#0099FF')}
@@ -128,7 +130,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   type="email"
                   name="email"
                   required
-                  placeholder="hello@company.com"
+                  placeholder="hello@pookie.fan"
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none transition-colors"
                   style={noto}
                   onFocus={(e) => (e.currentTarget.style.borderColor = '#0099FF')}
