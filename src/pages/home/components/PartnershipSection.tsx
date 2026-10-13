@@ -3,17 +3,17 @@ import ContactModal from '../../../components/feature/ContactModal';
 
 const steps = [
   {
-    icon: '/plan_icon.png',
+    icon: '/plan_icon.webp',
     label: 'Planning',
     desc: ['다양한 Pookie 제작옵션과 콘텐츠로', 'IP와 팬 특성에 부합하는 경험을 기획합니다.'],
   },
   {
-    icon: '/make_icon.png',
+    icon: '/make_icon.webp',
     label: 'Making',
     desc: ['빠른 제작 기간과 철저한 품질 관리로', '고품질의 포토카드와 웹서비스를 제작합니다.'],
   },
   {
-    icon: '/grow_icon.png',
+    icon: '/grow_icon.webp',
     label: 'Growing',
     desc: ['누적된 팬 데이터를 기반으로', '새로운 팬 경험과 수익 성장 전략을 제안합니다.'],
   },
@@ -26,26 +26,21 @@ export default function PartnershipSection() {
     <>
       <section
         id="partnership"
-        className="px-4 md:px-6 bg-white text-center flex flex-col justify-center"
-        style={{ minHeight: '100vh' }}
+        className="px-4 md:px-6 bg-white text-center flex flex-col justify-center min-h-[calc(100vh-63px)] md:min-h-[calc(100vh-79px)] py-8 md:py-16"
       >
-        <div className="max-w-5xl mx-auto w-full py-8">
-          <div className="min-h-[220px] md:min-h-[210px] flex flex-col justify-start">
-            {/* Label */}
-            <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
-              <span
-                className="inline-block px-3 py-1.5 rounded-md text-white"
-                style={{
-                  fontFamily: "'Noto Sans KR', sans-serif",
-                  fontWeight: 500,
-                  fontSize: '14px',
-                  background: '#0099FF',
-                  letterSpacing: '-0.02em',
-                }}
-              >
-                How we work with you
-              </span>
-            </div>
+        <div className="max-w-5xl mx-auto w-full">
+          <div className="flex flex-col justify-start">
+            <p
+            className="mb-4 md:mb-5 text-[13px] md:text-sm"
+            style={{
+              fontFamily: "'Inter', 'Noto Sans KR', sans-serif",
+              fontWeight: 700,
+              letterSpacing: '0.14em',
+              color: '#0099FF',
+            }}
+          >
+            PARTNERSHIP
+          </p>
 
             {/* Main copy */}
             <h2
@@ -59,8 +54,8 @@ export default function PartnershipSection() {
 
             {/* Desktop Description */}
             <p
-              className="hidden md:block text-xs md:text-sm leading-relaxed max-w-2xl mx-auto mb-10"
-              style={{ fontFamily: "'Noto Sans KR', sans-serif", color: '#8B8B8B', fontWeight: 400, lineHeight: 1.5, letterSpacing: '-0.02em' }}
+              className="hidden md:block text-base leading-relaxed max-w-2xl mx-auto mb-12"
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", color: '#5F6368', fontWeight: 400, lineHeight: 1.5, letterSpacing: '-0.02em' }}
             >
               IP사의 세계관과 캠페인 목표에 맞춰 기획–제작–운영–리포트까지 풀 서비스를 제공합니다.
               <br />
@@ -73,9 +68,9 @@ export default function PartnershipSection() {
               style={{
                 maxWidth: '320px',
                 fontFamily: "'Noto Sans KR', sans-serif",
-                color: '#8B8B8B',
+                color: '#5F6368',
                 fontWeight: 400,
-                fontSize: '13px',
+                fontSize: '14px',
                 lineHeight: 1.55,
                 letterSpacing: '-0.03em',
                 whiteSpace: 'pre-line',

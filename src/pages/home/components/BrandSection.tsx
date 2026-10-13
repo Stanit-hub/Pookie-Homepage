@@ -2,26 +2,21 @@ export default function BrandSection() {
   return (
     <section
       id="brand"
-      className="px-4 md:px-6 bg-white text-center flex flex-col justify-center"
-      style={{ minHeight: '100vh' }}
+      className="px-4 md:px-6 bg-white text-center flex flex-col justify-center min-h-[calc(100vh-63px)] md:min-h-[calc(100vh-79px)] py-8 md:py-16"
     >
-      <div className="max-w-5xl mx-auto w-full py-8">
-        <div className="min-h-[240px] md:min-h-[260px] flex flex-col justify-start">
-          {/* Label */}
-          <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
-            <span
-              className="inline-block px-3 py-1.5 rounded-md text-white"
-              style={{
-                fontFamily: "'Noto Sans KR', sans-serif",
-                fontWeight: 500,
-                fontSize: '14px',
-                background: '#0099FF',
-                letterSpacing: '-0.02em',
-              }}
-            >
-              What is Pookie?
-            </span>
-          </div>
+      <div className="max-w-5xl mx-auto w-full">
+        <div className="flex flex-col justify-start">
+          <p
+            className="mb-4 md:mb-5 text-[13px] md:text-sm"
+            style={{
+              fontFamily: "'Inter', 'Noto Sans KR', sans-serif",
+              fontWeight: 700,
+              letterSpacing: '0.14em',
+              color: '#0099FF',
+            }}
+          >
+            BRAND
+          </p>
 
           {/* Desktop Title */}
           <h2
@@ -60,10 +55,10 @@ export default function BrandSection() {
 
           {/* Desktop Description */}
           <p
-            className="hidden md:block text-sm leading-relaxed max-w-2xl mx-auto mb-10"
+            className="hidden md:block text-base leading-relaxed max-w-2xl mx-auto mb-12"
             style={{
               fontFamily: "'Noto Sans KR', sans-serif",
-              color: '#8B8B8B',
+              color: '#5F6368',
               fontWeight: 400,
               lineHeight: 1.5,
               letterSpacing: '-0.02em',
@@ -81,9 +76,9 @@ export default function BrandSection() {
             style={{
               maxWidth: '320px',
               fontFamily: "'Noto Sans KR', sans-serif",
-              color: '#8B8B8B',
+              color: '#5F6368',
               fontWeight: 400,
-              fontSize: '13px',
+              fontSize: '14px',
               lineHeight: 1.55,
               letterSpacing: '-0.03em',
               wordBreak: 'keep-all',
@@ -114,7 +109,7 @@ export default function BrandSection() {
             style={{ gridColumn: '1', gridRow: '1 / span 2' }}
           >
             <img
-              src="/brand1.png"
+              src="/brand1.webp"
               alt="콘서트에서 즐기는 팬들"
               className="w-full h-full object-cover object-top"
             />
@@ -140,7 +135,7 @@ export default function BrandSection() {
           </div>
           <div className="overflow-hidden" style={{ gridColumn: '2', gridRow: '2' }}>
             <img
-              src="/brand2.png"
+              src="/brand2.webp"
               alt="야구장에서 응원하는 팬"
               className="w-full h-full object-cover object-center"
             />
@@ -150,14 +145,14 @@ export default function BrandSection() {
             style={{ gridColumn: '3', gridRow: '1 / span 2' }}
           >
             <img
-              src="/brand3.png"
+              src="/brand3.webp"
               alt="카페에서 포토카드를 즐기는 팬들"
               className="w-full h-full object-cover object-top"
             />
           </div>
           <div className="overflow-hidden" style={{ gridColumn: '4', gridRow: '1' }}>
             <img
-              src="/brand4.png"
+              src="/brand4.webp"
               alt="포토카드 클로즈업"
               className="w-full h-full object-cover object-center"
             />
@@ -199,7 +194,7 @@ export default function BrandSection() {
               style={{ gridColumn: '1', gridRow: '1 / span 2' }}
             >
               <img
-                src="/brand1.png"
+                src="/brand1.webp"
                 alt="콘서트에서 즐기는 팬들"
                 className="w-full h-full object-cover object-center"
               />
@@ -227,7 +222,7 @@ export default function BrandSection() {
 
             <div className="overflow-hidden" style={{ gridColumn: '2', gridRow: '2' }}>
               <img
-                src="/brand2.png"
+                src="/brand2.webp"
                 alt="야구장에서 응원하는 팬"
                 className="w-full h-full object-cover object-center"
               />
@@ -245,7 +240,7 @@ export default function BrandSection() {
           >
             <div className="overflow-hidden" style={{ gridColumn: '1', gridRow: '1' }}>
               <img
-                src="/brand4.png"
+                src="/brand4.webp"
                 alt="포토카드 클로즈업"
                 className="w-full h-full object-cover object-center"
               />
@@ -256,7 +251,7 @@ export default function BrandSection() {
               style={{ gridColumn: '2', gridRow: '1 / span 2' }}
             >
               <img
-                src="/brand3.png"
+                src="/brand3.webp"
                 alt="카페에서 포토카드를 즐기는 팬들"
                 className="w-full h-full object-cover object-top"
               />

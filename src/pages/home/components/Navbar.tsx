@@ -24,8 +24,11 @@ export default function Navbar() {
   const handleNavClick = (href: string) => {
     const el = document.querySelector(href);
     if (el) {
-      const navHeight = window.innerWidth < 768 ? 56 : 72;
-      const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      // 스크롤된 상태의 메뉴바 높이(모바일 65px / PC 81px)만큼 띄워서, 누른 섹션이 메뉴바 아래 화면을 꽉 채우게 한다.
+      // 섹션 최소 높이 calc(100vh - 63px / 79px)는 이 값보다 2px 여유를 둔 것이라
+      // 소수점 반올림이 생겨도 다음 섹션이 화면 아래로 비치지 않는다. 메뉴바 높이를 바꾸면 두 값을 같이 고칠 것.
+      const navHeight = window.innerWidth < 768 ? 65 : 81;
+      const top = Math.round(el.getBoundingClientRect().top + window.scrollY - navHeight + 1);
       window.scrollTo({ top, behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
@@ -50,7 +53,7 @@ export default function Navbar() {
               className="cursor-pointer whitespace-nowrap transition-all"
             >
               <img
-                src="https://static.readdy.ai/image/38cfc5892dfd554128357063690c86c1/9ca6c04c79907e9e0ce54af502d74157.png"
+                src="/pookie_logo.svg"
                 alt="Pookie"
                 className="h-6 md:h-7 w-auto transition-all duration-300"
                 style={{ filter: logoFilter }}
@@ -90,6 +93,8 @@ export default function Navbar() {
               {/* Hamburger — Mobile only */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
+                aria-expanded={isMobileMenuOpen}
                 className="md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer"
               >
                 <span

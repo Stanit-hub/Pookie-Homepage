@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <h1 className="sr-only">Pookie, 팬덤을 위한 NFC 포토카드 솔루션</h1>
       <div id="hero">
         <HeroNew />
       </div>

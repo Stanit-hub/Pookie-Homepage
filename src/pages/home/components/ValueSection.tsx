@@ -1,24 +1,24 @@
 const valueItems = [
   {
-    icon: '/icon1.png',
+    icon: '/icon1.webp',
     label: 'Fan Experience',
     desc: "수집·해금·퀘스트가 이어지는 '플레이 가능한 굿즈' 제공",
     descMobile: "수집·해금·퀘스트가 이어지는\n'플레이 가능한 굿즈' 제공",
   },
   {
-    icon: '/icon2.png',
+    icon: '/icon2.webp',
     label: 'Revenue',
     desc: '프리미엄 디지털 혜택과 이벤트 연계로 굿즈 LTV 및 지속적 수익 창출',
     descMobile: '프리미엄 디지털 혜택과 이벤트 연계로\n굿즈 LTV 및 지속적 수익 창출',
   },
   {
-    icon: '/icon3.png',
+    icon: '/icon3.webp',
     label: 'Data',
     desc: '스캔·참여·리워드 사용까지, 카드 단위로 정교한 팬덤 데이터 축적',
     descMobile: '스캔·참여·리워드 사용까지,\n카드 단위로 정교한 팬덤 데이터 축적',
   },
   {
-    icon: '/icon4.png',
+    icon: '/icon4.webp',
     label: 'Operation',
     desc: '인프라 구축 없이 카드와 시나리오만으로 다양한 캠페인 즉시 실행',
     descMobile: '인프라 구축 없이 카드와 시나리오만으로\n다양한 캠페인 즉시 실행',
@@ -29,34 +29,29 @@ export default function ValueSection() {
   return (
     <section
       id="value"
-      className="px-4 md:px-6 relative overflow-hidden text-center flex flex-col justify-center"
-      style={{ minHeight: '100vh' }}
+      className="px-4 md:px-6 relative overflow-hidden text-center flex flex-col justify-center min-h-[calc(100vh-63px)] md:min-h-[calc(100vh-79px)] py-8 md:py-16"
     >
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/value_bg.png')",
+          backgroundImage: "url('/value_bg.webp')",
         }}
       ></div>
 
-      <div className="relative z-10 max-w-5xl mx-auto w-full py-8">
-        <div className="min-h-[220px] md:min-h-[210px] flex flex-col justify-start">
-          {/* Label */}
-          <div className="flex items-center justify-center gap-3 mb-4 md:mb-5">
-            <span
-              className="inline-block px-3 py-1.5 rounded-md text-white"
-              style={{
-                fontFamily: "'Noto Sans KR', sans-serif",
-                fontWeight: 500,
-                fontSize: '14px',
-                background: '#0099FF',
-                letterSpacing: '-0.02em',
-              }}
-            >
-              Why Pookie?
-            </span>
-          </div>
+      <div className="relative z-10 max-w-5xl mx-auto w-full">
+        <div className="flex flex-col justify-start">
+          <p
+            className="mb-4 md:mb-5 text-[13px] md:text-sm"
+            style={{
+              fontFamily: "'Inter', 'Noto Sans KR', sans-serif",
+              fontWeight: 700,
+              letterSpacing: '0.14em',
+              color: '#FFFFFF',
+            }}
+          >
+            VALUE
+          </p>
 
           {/* Main copy */}
           <h2
@@ -76,7 +71,7 @@ export default function ValueSection() {
 
           {/* Sub copy */}
           <p
-            className="text-xs md:text-sm leading-relaxed max-w-2xl mx-auto mb-6 md:mb-6"
+            className="text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-8 md:mb-12"
             style={{
               fontFamily: "'Noto Sans KR', sans-serif",
               color: '#EDF5FC',

@@ -28,10 +28,12 @@ export default function HeroNew() {
     const currentFrame = (index: number) =>
       `${frameBasePath}/pookie_frames_${index}.webp`;
 
-    // 캔버스 크기 설정
+    // 캔버스 크기 설정 (레티나 화면은 픽셀 밀도에 맞춰 선명하게, 최대 2배)
     const setCanvasSize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(window.innerWidth * dpr);
+      canvas.height = Math.round(window.innerHeight * dpr);
+      context.imageSmoothingQuality = 'high';
     };
     setCanvasSize();
 
@@ -98,7 +100,7 @@ export default function HeroNew() {
 
   return (
     <div ref={containerRef} className="hero-frame-container">
-      <canvas ref={canvasRef} className="hero-frame-canvas" />
+      <canvas ref={canvasRef} className="hero-frame-canvas" aria-hidden="true" />
     </div>
   );
 }
